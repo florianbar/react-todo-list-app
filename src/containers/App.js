@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cards from '../components/Cards/Cards'
-import CardAddButton from '../components/Cards/CardAddButton/CardAddButton'
+import CardAddButton from '../components/CardAddButton/CardAddButton'
 import './App.css';
 
 class App extends Component {
