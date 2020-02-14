@@ -2,17 +2,17 @@
   text-align: center;
 }
 
-.CardList {
+.Cards {
   width: 450px;
   margin: 0 auto;
 }
-.CardList button {
+.Cards button {
   padding: 10px;
   background-color: blue;
   border: none;
   color: #fff;
 }
-.CardList button:hover {
+.Cards button:hover {
   background-color: lightseagreen;
   cursor: pointer;
 }
