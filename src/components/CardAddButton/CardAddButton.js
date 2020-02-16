@@ -10,7 +10,15 @@ const cardAddButton = (props) => {
     let content = null;
     if (props.isAdding) {
         content = <div>
-            <input type="text" placeholder="Card name" onChange={setCardTitle} />
+            <input type="text" 
+                placeholder="Card name" 
+                onChange={setCardTitle} 
+                onKeyPress={event => {
+                    if (event.key === 'Enter') {
+                        props.addCard(cardTitle)
+                    }
+                }} 
+            />
             <button onClick={() => props.addCard(cardTitle)}>Add</button>
             <button onClick={props.hideAddForm}>Cancel</button>
         </div>;
