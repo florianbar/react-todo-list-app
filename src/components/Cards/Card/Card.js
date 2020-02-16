@@ -3,7 +3,9 @@ import './Card.css';
 
 const card = (props) => {
     return <div className="Card">
-        <button className="remove">x</button>  
+        <button 
+            className="remove" 
+            onClick={props.removeCard}>x</button>  
         <h3>{props.cardTitle}</h3>
     </div>;
 };

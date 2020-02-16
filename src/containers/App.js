@@ -25,22 +25,28 @@ class App extends Component {
     });
   };
 
-  addCard = (cardTitle) => {
+  addCard = (title) => {
     let cards = [...this.state.cards];
     const newCard = {
-      id: cards.length,
-      title: cardTitle
+      id: cards[cards.length-1].id + 1,
+      title: title
     };
     cards.push(newCard);
     this.setState({ cards: cards });
     this.hideAddForm();
   };
 
+  removeCard = (index) => {
+    let cards = [...this.state.cards];
+    cards.splice(index, 1);
+    this.setState({ cards: cards });
+  };
+
   render() {
     return (
       <div className="App">
         <h1>Todo App</h1>
-        <Cards cards={this.state.cards} />
+        <Cards cards={this.state.cards} removeCard={this.removeCard} />
         <AddCard
           isAdding={this.state.isAdding}
           showAddForm={this.showAddForm} 
