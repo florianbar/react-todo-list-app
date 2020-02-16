@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Cards from '../components/Cards/Cards'
-import CardAddButton from '../components/CardAddButton/CardAddButton'
+import AddCard from '../components/AddCard/AddCard'
 import './App.css';
 
 class App extends Component {
@@ -41,7 +41,7 @@ class App extends Component {
       <div className="App">
         <h1>Todo App</h1>
         <Cards cards={this.state.cards} />
-        <CardAddButton
+        <AddCard
           isAdding={this.state.isAdding}
           showAddForm={this.showAddForm} 
           hideAddForm={this.hideAddForm} 

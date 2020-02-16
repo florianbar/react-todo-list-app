@@ -1,0 +1,22 @@
+.AddCard .addButton,
+.AddCard .cancelButton {
+    padding: 10px;
+    border: none;
+    color: #fff;
+}
+.AddCard .addButton:hover,
+.AddCard .cancelButton:hover {
+    cursor: pointer;
+}
+.AddCard .addButton {
+    background-color: blue;
+}
+.AddCard .addButton:hover {
+    background-color: lightseagreen;
+}
+.AddCard .cancelButton {
+    background-color: red;
+}
+.AddCard .cancelButton:hover {
+    background-color: salmon;
+}

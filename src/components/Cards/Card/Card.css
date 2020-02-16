@@ -1,0 +1,11 @@
+.Card {
+    position: relative;
+    margin: 0 0 10px;
+    padding: 10px;
+    border: 1px solid #333;
+}
+.Card .remove {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
