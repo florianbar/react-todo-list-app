@@ -27,8 +27,9 @@ class App extends Component {
 
   addCard = (title) => {
     let cards = [...this.state.cards];
+    const cardId = cards.length > 0 ? cards[cards.length-1].id + 1 : 0;
     const newCard = {
-      id: cards[cards.length-1].id + 1,
+      id: cardId,
       title: title
     };
     cards.push(newCard);
@@ -43,14 +44,10 @@ class App extends Component {
   };
 
   render() {
-    let cardsContent = <Cards cards={this.state.cards} removeCard={this.removeCard} />;
-    if (this.state.cards.length === 0) {
-      cardsContent = <p>No cards</p>;
-    }
     return (
       <div className="App">
         <h1>Todo App</h1>
-        {cardsContent}
+        <Cards cards={this.state.cards} removeCard={this.removeCard} />
         <AddCard
           isAdding={this.state.isAdding}
           showAddForm={this.showAddForm} 
