@@ -43,10 +43,14 @@ class App extends Component {
   };
 
   render() {
+    let cardsContent = <Cards cards={this.state.cards} removeCard={this.removeCard} />;
+    if (this.state.cards.length === 0) {
+      cardsContent = <p>No cards</p>;
+    }
     return (
       <div className="App">
         <h1>Todo App</h1>
-        <Cards cards={this.state.cards} removeCard={this.removeCard} />
+        {cardsContent}
         <AddCard
           isAdding={this.state.isAdding}
           showAddForm={this.showAddForm} 
