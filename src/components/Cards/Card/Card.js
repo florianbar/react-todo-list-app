@@ -1,10 +1,10 @@
 import React from 'react';
-import './Card.css';
+import styles from './Card.module.css';
 
 const card = (props) => {
-    return <div className="Card">
+    return <div className={styles["Card"]}>
         <button 
-            className="remove" 
+            className={styles["remove"]} 
             onClick={props.removeCard}>x</button>  
         <h3>{props.cardTitle}</h3>
     </div>;

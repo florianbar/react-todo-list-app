@@ -1,5 +1,5 @@
 import React from 'react';
-import './AddCard.css';
+import styles from './AddCard.module.css';
 
 const cardAddButton = (props) => {
     let cardTitle = "";
@@ -10,7 +10,7 @@ const cardAddButton = (props) => {
 
     let content = null;
     if (props.isAdding) {
-        content = <div className="AddCard">
+        content = <div className={styles["AddCard"]}>
             <input 
                 type="text" 
                 placeholder="Card name" 
@@ -20,11 +20,11 @@ const cardAddButton = (props) => {
                         props.addCard(cardTitle)
                     }
                 }} />
-            <button className="addButton" onClick={() => props.addCard(cardTitle)}>Add</button>
-            <button className="cancelButton" onClick={props.hideAddForm}>Cancel</button>
+            <button className={styles["addButton"]} onClick={() => props.addCard(cardTitle)}>Add</button>
+            <button className={styles["cancelButton"]} onClick={props.hideAddForm}>Cancel</button>
         </div>;
     } else {
-        content = <div className="AddCard">
+        content = <div className={styles["AddCard"]}>
             <button 
                 type="button" 
                 onClick={props.showAddForm}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card/Card';
-import './Cards.css';
+import styles from './Cards.module.css';
 
 const cards = (props) => {
     let cards = null;
@@ -15,7 +15,7 @@ const cards = (props) => {
         });
     }
 
-    return <div className="Cards">
+    return <div className={styles["Cards"]}>
         {cards}
     </div>;
 };
